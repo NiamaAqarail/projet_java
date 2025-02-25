@@ -1,0 +1,61 @@
+.profile-card {
+    width:78%;
+    margin-top: 80px;
+    margin-left: 280px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 20px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    padding: 8px;
+    border: 1px solid #f53b3b;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .form-actions {
+    text-align: right; /* Align Save button to the right */
+    margin-top: 20px;
+  }
+  
+  .save-button {
+    padding: 10px 20px;
+    background-color: #f53b3b;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .save-button:hover {
+    color: #f53b3b;
+    background-color: #ffffff;
+    border: solid #f53b3b 2px;
+  }
+  

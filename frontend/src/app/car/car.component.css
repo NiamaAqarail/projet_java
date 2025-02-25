@@ -1,0 +1,100 @@
+.car-info-container {
+    width: 78%;
+    margin-left: 280px;
+    margin-top: 70px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  
+  .car-info-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .car-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: left;
+    align-items: start;
+  }
+  
+  .car-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .car-info-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .car-info-form .form-group {
+    margin-bottom: 10px;
+    width: 80%;
+    padding-left: 86px;
+  }
+  
+  .car-info-form label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .car-info-form .form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ed3939;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .car-info-form .form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  
+  .car-info-form .save-btn {
+    padding: 10px 20px;
+    background-color: #f53b3b;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .car-info-form .save-btn:hover {
+    color: #f53b3b;
+    background-color: #ffffff;
+    border: solid #f53b3b 2px;
+  }
+  
+  .car-info-form .loan-btn {
+    padding: 10px 20px;
+    background-color: #f53b3b;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .car-info-form .loan-btn:hover {
+    color: #f53b3b;
+    background-color: #ffffff;
+    border: solid #f53b3b 2px;
+  }
+  

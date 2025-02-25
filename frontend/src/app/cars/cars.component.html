@@ -1,0 +1,22 @@
+<app-sidebar></app-sidebar>
+<div class="content">
+  <div *ngIf="message" class="message" [ngClass]="{'success': isSuccess, 'error': !isSuccess}">
+    {{ message }}
+  </div>
+  <div class="form-actions">
+    <button (click)="navigateToAddCar()" class="save-btn">add</button>
+  </div>
+  <div class="dashboard">
+    
+    <div class="card" *ngFor="let car of cars">
+      <img [src]="car.image" alt="{{ car.marque }}" class="car-image" />
+      <h3>{{ car.marque }}</h3>
+      <p>Price: ${{ car.prix }}</p>
+      <div class="card-buttons">
+        <button (click)="showDetails(car)" class="show-button">Show</button>
+        <button (click)="deleteCar(car.id)" class="loan-button">Delete</button>
+      </div>
+    </div>
+  </div> 
+  
+</div>

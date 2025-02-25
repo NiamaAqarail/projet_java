@@ -1,0 +1,38 @@
+<app-sidebar></app-sidebar>
+<div class="table-container">
+    <h2>Loans</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Client Full Name</th>
+          <th>Car</th>
+          <th>Starting Date</th>
+          <th>Ending Date</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let loan of loans">
+          <!-- Link to client profile -->
+          <td>
+            <a routerLink="/users">{{ loan.client.nom }} {{ loan.client.prenom }}</a>
+          </td>
+  
+          <!-- Link to show car page -->
+          <td>
+            <a routerLink="/cars">{{ loan.voiture.marque }} {{ loan.voiture.model }}</a>
+          </td>
+  
+          <td>{{ loan.dateDebut | date: 'dd/MM/yyyy' }}</td>
+          <td>{{ loan.dateFin | date: 'dd/MM/yyyy' }}</td>
+          <td>{{ loan.etat }}</td>
+          <td class="actions">
+            <button class="show-button">Show</button>
+            <button (click)="deleteLoan(loan.id)" class="delete-button">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

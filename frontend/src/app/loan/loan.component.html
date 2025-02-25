@@ -1,0 +1,76 @@
+<app-sidebar></app-sidebar>
+<div class="loan-info-container">
+    <h2>Loan Information</h2>
+    <div class="loan-info-content">
+      <!-- Left side: Loan Details -->
+      <form (ngSubmit)="saveLoan()" #loanForm="ngForm" class="loan-info-form">
+        <div class="form-group">
+          <label for="client">Client</label>
+          <input
+            type="text"
+            id="client"
+            [(ngModel)]="loan.clientName"
+            name="client"
+            required
+            class="form-control"
+          />
+        </div>
+  
+        <div class="form-group">
+          <label for="voiture">Car (Model & Brand)</label>
+          <input
+            type="text"
+            id="voiture"
+            [(ngModel)]="loan.carModelAndBrand"
+            name="voiture"
+            required
+            class="form-control"
+          />
+        </div>
+  
+        <div class="form-group">
+          <label for="dateDebut">Start Date</label>
+          <input
+            type="date"
+            id="dateDebut"
+            [(ngModel)]="loan.startDate"
+            name="dateDebut"
+            required
+            class="form-control"
+          />
+        </div>
+  
+        <div class="form-group">
+          <label for="dateFin">End Date</label>
+          <input
+            type="date"
+            id="dateFin"
+            [(ngModel)]="loan.endDate"
+            name="dateFin"
+            required
+            class="form-control"
+          />
+        </div>
+  
+        <div class="form-group">
+          <label for="status">Status</label>
+          <select
+            id="status"
+            [(ngModel)]="loan.status"
+            name="status"
+            required
+            class="form-control"
+          >
+            <option *ngFor="let option of statusOptions" [value]="option">
+              {{ option }}
+            </option>
+          </select>
+        </div>
+  
+        <div class="form-actions">
+          <button type="submit" class="save-btn">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  

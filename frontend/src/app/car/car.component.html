@@ -1,0 +1,101 @@
+<app-sidebar></app-sidebar>
+<div class="car-info-container">
+  <div class="car-info-content">
+    <!-- Left side: Car Image -->
+    <div class="car-image-container">
+      <img [src]="car.image" alt="{{ car.marque }}" class="car-image" />
+    </div>
+
+    <!-- Right side: Editable Form -->
+    <form (ngSubmit)="onSubmit()" #carForm="ngForm" class="car-info-form">
+      <div class="form-group">
+        <label for="marque">Marque</label>
+        <input
+          type="text"
+          id="marque"
+          [(ngModel)]="car.marque"
+          name="marque"
+          required
+          class="form-control"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="model">Model</label>
+        <input
+          type="text"
+          id="model"
+          [(ngModel)]="car.model"
+          name="model"
+          required
+          class="form-control"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="anneeFab">Year of Manufacture</label>
+        <input
+          type="number"
+          id="anneeFab"
+          [(ngModel)]="car.anneeFab"
+          name="anneeFab"
+          required
+          class="form-control"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="carburant">Carburant</label>
+        <input
+          type="text"
+          id="carburant"
+          [(ngModel)]="car.carburant"
+          name="carburant"
+          required
+          class="form-control"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="immatriculation">Immatriculation</label>
+        <input
+          type="text"
+          id="immatriculation"
+          [(ngModel)]="car.immatriculation"
+          name="immatriculation"
+          required
+          class="form-control"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="prix">Price</label>
+        <input
+          type="number"
+          id="prix"
+          [(ngModel)]="car.prix"
+          name="prix"
+          required
+          class="form-control"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="etat">State</label>
+        <input
+          type="text"
+          id="etat"
+          [(ngModel)]="car.etat"
+          name="etat"
+          required
+          class="form-control"
+        />
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="save-btn">Save</button>
+        <button type="button" class="loan-btn">Loan</button>
+      </div>
+    </form>
+  </div>
+</div>

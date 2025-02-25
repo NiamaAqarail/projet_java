@@ -1,0 +1,110 @@
+<app-sidebar></app-sidebar>
+<div class="car-info-container">
+    <h2>Ajouter Voiture</h2>
+    <div class="car-info-content">
+        <form (ngSubmit)="onSubmit()" #carForm="ngForm" class="car-info-form">
+            <div class="form-sections">
+                <!-- Left Section -->
+                <div class="left-section">
+                    <div class="form-group">
+                        <label for="image">Image Link</label>
+                        <input
+                            type="text"
+                            id="image"
+                            [(ngModel)]="car.image"
+                            name="image"
+                            required
+                            class="form-control"
+                        />
+                    </div>
+                    <div class="form-group">
+                        <label for="marque">Marque</label>
+                        <input
+                            type="text"
+                            id="marque"
+                            [(ngModel)]="car.marque"
+                            name="marque"
+                            required
+                            class="form-control"
+                        />
+                    </div>
+                    <div class="form-group">
+                        <label for="model">Model</label>
+                        <input
+                            type="text"
+                            id="model"
+                            [(ngModel)]="car.model"
+                            name="model"
+                            required
+                            class="form-control"
+                        />
+                    </div>
+                    <div class="form-group">
+                        <label for="anneeFab">Year of Manufacture</label>
+                        <input
+                            type="number"
+                            id="anneeFab"
+                            [(ngModel)]="car.anneeFab"
+                            name="anneeFab"
+                            required
+                            class="form-control"
+                        />
+                    </div>
+                </div>
+
+                <!-- Right Section -->
+                <div class="right-section">
+                    <div class="form-group">
+                        <label for="carburant">Carburant</label>
+                        <input
+                            type="text"
+                            id="carburant"
+                            [(ngModel)]="car.carburant"
+                            name="carburant"
+                            required
+                            class="form-control"
+                        />
+                    </div>
+                    <div class="form-group">
+                        <label for="immatriculation">Immatriculation</label>
+                        <input
+                            type="text"
+                            id="immatriculation"
+                            name="immatriculation"
+                            [(ngModel)]="car.immatriculation"
+                            required
+                            class="form-control"
+                        />
+                    </div>
+                    <div class="form-group">
+                        <label for="prix">Price</label>
+                        <input
+                            type="number"
+                            id="prix"
+                            [(ngModel)]="car.prix"
+                            name="prix"
+                            required
+                            class="form-control"
+                        />
+                    </div>
+                    <div class="form-group">
+                        <label for="etat">State</label>
+                        <input
+                            type="text"
+                            id="etat"
+                            [(ngModel)]="car.etat"
+                            name="etat"
+                            required
+                            class="form-control"
+                        />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Form Actions -->
+            <div class="form-actions">
+                <button type="submit" class="save-btn">Save</button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+<app-sidebar></app-sidebar>
+<div class="table-container">
+    <h2>Reparations</h2>
+    <table>
+      <thead>
+        <tr>
+          <!-- <th>Car Brand</th>
+          <th>Car Model</th> -->
+          <th>Starting Date</th>
+          <th>Ending Date</th>
+          <th>Cost</th>
+          <th>State</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let reparation of reparations">
+          <!-- Link to client profile -->
+          <!-- <td>
+            <a routerLink="/users">{{ reparation.voiture.marque }} {{ reparation.voiture.model }}</a>
+          </td> -->
+  
+          <!-- Link to show car page -->
+          <!-- <td>
+            <a routerLink="/cars">{{ reparation.voiture.model }} {{ reparation.voiture.model }}</a>
+          </td> -->
+  
+          <td>{{ reparation.dateDebut | date: 'dd/MM/yyyy' }}</td>
+          <td>{{ reparation.dateFin | date: 'dd/MM/yyyy' }}</td>
+          <td>{{reparation.cout}}</td>
+          <td>{{ reparation.etat }}</td>
+          <td class="actions">
+            <button class="show-button">Show</button>
+            <button (click)="deleteReparation(reparation.id)" class="delete-button">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

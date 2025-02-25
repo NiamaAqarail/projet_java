@@ -1,0 +1,33 @@
+<app-sidebar></app-sidebar>
+<div class="users-page">
+  <div *ngIf="message" class="message" [ngClass]="{'success': isSuccess, 'error': !isSuccess}">
+    {{ message }}
+  </div>
+  <h2>Clients</h2>
+    <table class="users-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Username</th>
+          <th>Email</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let client of clients">
+          <td>{{ client.user.id }}</td>
+          <td>{{ client.user.username }}</td>
+          <td>{{ client.user.email }}</td>
+          <td class="actions">
+            <button (click)="showProfile(client.user.id)" class="show-button">Show</button>
+            <button (click)="deleteClient(client.user.id)" class="delete-button">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="form-actions">
+      <button (click)="navigateToAddClient()" class="delete-button">add</button>
+    </div>
+  </div>
+  
+  
